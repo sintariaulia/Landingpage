@@ -14,6 +14,8 @@
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.2/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <!-- Place favicon.ico in the root directory -->
   <link
       rel="stylesheet"
@@ -81,7 +83,7 @@
 
 
   <!-- Content Page -->
-  <div class="bg-[#05035a] h-[550px]">
+  <div class="bg-[#05035a] h-[66 0px]">
       <div class="items-center grid  lg:grid-cols-2 ">
         <div class=" ml-40 py-50">
           <h1 class="text-6xl text-white font-bold ">Achetere, revendre & collectioner</h1>
@@ -93,33 +95,33 @@
           </p>
         </div>
 
-        <div class="flex px-10 gap-5 ">
-          <div class="">
-            <div class="rounded-sm bg-gray-400/50 w-[300px] ">
-              <a href="#!">
-                <img class="rounded-t-sm h-[300px]" src="img/game1.jpg" alt=""/>
-              </a>
-              <div class="p-5">
-                <h5 class="text-slate-100 text-xl text-center font-bold mb-2">Pokemon Legends Arceus </h5>
-                <p class="text-slate-200 font-thin ">
-                  Pokémon Legends: Arceus game, you'll join the Galaxy Team as a member of the Survey Corps.
-                </p>
-                <div class="flex mt-5 mb-2">
-                  <p class="text-slate-400">
-                    Price
+        <div>
+          <div class="flex px-10 gap-5 ">
+            <div class="">
+              <div class="rounded-sm bg-gray-400/50 w-[300px] ">
+                <a href="#!">
+                  <img class="rounded-t-sm h-[300px]" src="img/game1.jpg" alt=""/>
+                </a>
+                <div class="p-5">
+                  <h5 class="text-slate-100 text-xl text-center font-bold mb-2">Pokemon Legends Arceus </h5>
+                  <p class="text-slate-200 font-thin ">
+                    Pokémon Legends: Arceus game, you'll join the Galaxy Team as a member of the Survey Corps.
                   </p>
-                  <p class="text-slate-100 text-right font-bold ml-40">
-                    US $72,5
-                  </p>
+                  <div class="flex mt-5 mb-2">
+                    <p class="text-slate-400">
+                      Price
+                    </p>
+                    <p class="text-slate-100 text-right font-bold ml-40">
+                      US $72,5
+                    </p>
+                  </div>
+                  <button type="button" class="ml-52 px-5 py-2.5 bg-blue-700 text-white font-medium text-xs uppercase rounded-sm  hover:bg-[#082173]">
+                    Buy
+                  </button>
                 </div>
-                <button type="button" class="ml-52 px-5 py-2.5 bg-blue-700 text-white font-medium text-xs uppercase rounded-sm  hover:bg-[#082173]">
-                  Buy
-                </button>
               </div>
             </div>
-          </div>
 
-          <div class="">
             <div class="rounded-sm shadow-sm bg-white/20 w-[300px] ">
               <a href="#!">
                 <img class="rounded-t-sm h-[300px]" src="img/game2.jpg" alt=""/>
@@ -143,10 +145,25 @@
               </div>
             </div>
           </div>
+
+          <div class="py-10">
+            <div class="ml-80">
+              <div class="flex text-white font-thin">
+                <p class="pb-3">2/4 Product</p>
+                <div class="pl-36">
+                  <a href="#"><i class="px-7 py-1 fas fa-arrow-left  hover:text-yellow-400"></i></a>
+                  <a href="#"><i class="py-1 fas fa-arrow-right hover:text-yellow-400"></i></a>
+                </div>
+              </div>
+              <div class="border-2 border-yellow-500 w-32"></div>
+            </div>
+          </div>
+
         </div>
       </div>
-  </div>
+    </div>
   <!--End Content Page -->
+
 
   <!-- Content Product -->
   <div class="bg-[#082173] h-[570px]">
@@ -197,7 +214,7 @@
   </div>
   <!--End Content Product -->
 
-  <!-- Content Favorite -->
+  <!-- Content New Collection -->
   <div class="bg-[#05035a] h-[700px]">
    <div class="font-sans">
         <!-- title -->
@@ -293,7 +310,16 @@
 
               </div>
             </div>
-
+            <div class="pt-40">
+                <div class="flex text-white font-thin">
+                  <p class="pb-3">1/8 Photo</p>
+                  <div class="">
+                    <a href="#"><i class="px-7 py-1 fas fa-arrow-left text-yellow-500"></i></a>
+                    <a href="#"><i class="py-1 fas fa-arrow-right text-yellow-500"></i></a>
+                  </div>
+                </div>
+                <div class="border-2 border-yellow-500 w-12"></div>
+            </div>
         </div>
       </div>
     </div>
@@ -301,21 +327,144 @@
   <!-- End Content Events -->
 
 
+  <!-- Content About Us -->
+  <div class="flex bg-[#05035a] h-[700px]">
+    <div class="flex mx-auto">
+        <div class="w-[700px] my-16">
+            <div class="pl-20 pr-12 pt-28">
+              <h1 class="text-5xl text-white font-bold">About Us</h1>
+              <p class="text-slate-300 text-justify font-light pt-10">
+                Pokémon Go is a free smartphone app that combines gaming with the real world.
+                The game uses location tracking and mapping technology to create an 'augmented reality'
+                where players catch and train Pokémon characters in real locations.
+                Pokémon (short for pocket monster) is a franchise owned by Nintendo and began life in the mid 90’s as a game for the Game Boy.
+                The game centered on fictional characters know as Pokemon which humans (Pokémon Trainers) catch and train to battle each other.
+                The Japanese franchise became well known for its unique graphics and cute characters. The popular game grew into a successful
+                franchise which spanned TV, trading cards, comics and toys. 20 years later Pokémon has made a big come back in the form of a
+                location based smartphone game.
+              </p>
+            </div>
+            <div class="pt-14 pl-96">
+              <div class="border border-yellow-500 w-[230px] h-9 rounded-sm">
+                <p class="text-white text-left px-4 py-1 font-thin">
+                  <a href="#" class="hover:text-yellow-500 ">
+                    Find out more
+                    <i class="pl-14 fas fa-arrow-right"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+        </div>
+        <div class="px-5 pt-16">
+          <img src="img/ico33.png" alt="" class="h-[300px] items-center py-5 bg-slate-800 rounded-lg">
+          <div class="pl-72 pt-10">
+            <img src="img/ico44.png" alt="" class="h-[300px] w-[330px] bg-slate-800 rounded-lg">
+          </div>
+        </div>
+    </div>
+  </div>
+  <!-- End Content About Us -->
+
+  <!-- Content Costumers -->
+  <div class="flex bg-[#05035a] h-[600px]">
+    <div class="flex m-auto gap-24  h-[350px] font-sans">
+        <div class="bg-white/10 rounded-3xl w-[300px]">
+          <div class="pt-10">
+            <img src="img/ico1.jpg" alt="" class="h-[200px] mx-auto"/>
+          </div>
+          <h4 class="text-center text-slate-100 pt-5 font-semibold">Services Client</h4>
+          <p class="font-thin text-center text-white p-2"> Lorean ipsun dolor sit aneat consseacteatur</p>
+        </div>
+
+        <div class="bg-white/10 rounded-3xl w-[300px]">
+          <div class="pt-10">
+            <img src="img/ico1.jpg" alt="" class="h-[200px] mx-auto"/>
+          </div>
+          <h4 class="text-center text-slate-100 pt-5 font-semibold">Secure Payment</h4>
+          <p class="font-thin text-center text-white p-2"> Lorean ipsun dolor sit aneat consseacteatur</p>
+        </div>
+
+        <div class="bg-white/10 rounded-3xl w-[300px]">
+          <div class="pt-10">
+            <img src="img/ico1.jpg" alt="" class="h-[200px] mx-auto"/>
+          </div>
+          <h4 class="text-center text-slate-100 pt-5 font-semibold">Express Delivery</h4>
+          <p class="font-thin text-center text-white p-2"> Lorean ipsun dolor sit aneat consseacteatur</p>
+        </div>
+
+        <div class="bg-white/10 rounded-3xl w-[300px]">
+          <div class="pt-10">
+            <img src="img/ico1.jpg" alt="" class="h-[200px] mx-auto"/>
+          </div>
+          <h4 class="text-center text-slate-100 pt-5 font-semibold">Click & Collect</h4>
+          <p class="font-thin text-center text-white p-2"> Lorean ipsun dolor sit aneat consseacteatur</p>
+        </div>
+
+      </div>
+  </div>
+  <!-- End Content Costumers -->
 
 
+  <!-- Content News Letter -->
+  <div class="flex bg-[#082173] h-[420px]">
+    <div class="mx-40 items-center grid max-w-2xl grid-cols-1 lg:max-w-7xl lg:grid-cols-2 gap-12">
+      <div class="">
+        <h1 class="text-6xl text-white font-bold ">Newsletter</h1>
+        <p class="text-white text-justify font-sans mt-5">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque doloribus odit alias voluptate, amet iusto consectetur nisi autem laborum maxime dolorum ut perspiciatis, quam neque quidem fugit delectus placeat officia?
+        </p>
+      </div>
+      <div class="alert shadow-lg">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          <i class="fa-solid fa-envelope"></i>
+          <span>Your Email Address</span>
+        </div>
+          <button class="btn btn-sm btn-warning">Subscribe</button>
+      </div>
+    </div>
+  </div>
+  <!-- End News Letter -->
 
+  <div class="bg-yellow-500 h-[50px]">
+    <div class="text-center p-6">
+      <h1 class="text-2xl text-white  font-bold ">Back to the top</h1>
+    </div>
+  </div>
 
-
-
-
-
-
-
-
-
-
-
-
+  <!--footer-->
+    <footer class="footer p-10 bg-[#0c1225] text-white">
+      <div>
+        <img class="h-[50px] px-[120px]" src="img/logo.png" alt="" />
+        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div>
+        <span class="footer-title">Services</span>
+        <a class="link link-hover">Branding</a>
+        <a class="link link-hover">Design</a>
+        <a class="link link-hover">Marketing</a>
+        <a class="link link-hover">Advertisement</a>
+      </div>
+      <div>
+        <span class="footer-title">Company</span>
+        <a class="link link-hover">About us</a>
+        <a class="link link-hover">Contact</a>
+        <a class="link link-hover">Jobs</a>
+        <a class="link link-hover">Press kit</a>
+      </div>
+      <div>
+        <span class="footer-title">Legal</span>
+        <a class="link link-hover">Terms of use</a>
+        <a class="link link-hover">Privacy policy</a>
+        <a class="link link-hover">Cookie policy</a>
+      </div>
+      <div>
+        <span class="footer-title">Legal</span>
+        <a class="link link-hover">Terms of use</a>
+        <a class="link link-hover">Privacy policy</a>
+        <a class="link link-hover">Cookie policy</a>
+      </div>
+    </footer>
 
 
 
