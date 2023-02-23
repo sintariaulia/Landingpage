@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js scroll-smooth" lang="">
 
 <head>
   <meta charset="utf-8">
@@ -14,16 +14,16 @@
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
+  <!-- Daisy UI -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.2/dist/full.css" rel="stylesheet" type="text/css" />
+  <!-- Flow Bite -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Place favicon.ico in the root directory -->
-  <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 
@@ -44,140 +44,174 @@
 
 <body>
   <!-- Content Navbar -->
-    <nav class="flex items-center h-[75px] bg-[#082173]">
-      <img class="h-[60px] px-[60px]" src="img/icon.png" alt="" />
-      <div>
-        <div class="m-40 xl:w-96 items-center">
-          <div class="input-group relative flex">
-            <input type="search" class="form-control relative px-5 py-2 w-[300px] text-base font-normal rounded " placeholder="search a product" >
-            <button class="px-5 py-2 bg-yellow-500 text-white rounded hover:bg-blue-800 " type="button" id="button-addon2">
+  <nav class="navbar bg-base-100 bg-[#082173] text-white">
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
+      <a href="#" class="flex items-center">
+        <img class="h-16 mr-3" src="img/icon.png" alt="Logo" />
+      </a>
+      <div class="hidden lg:block -ml-96">
+        <div class="items-center">
+          <div class="input-group flex">
+            <input type="search" class="form-control relative text-slate-600 px-5 py-2 w-[300px] text-base font-normal rounded "
+              placeholder="search a product">
+            <button class="px-5 py-2 bg-yellow-500 text-white rounded hover:bg-blue-800 " type="button"
+              id="button-addon2">
               <i class="fas fa-search"></i>
             </button>
           </div>
         </div>
       </div>
-
-      <div class="flex h-[30px] mx-[300px] w-[250px]">
-        <div class="text-white pl-[30px]  hover:text-yellow-400">
-          <i class="fas fa-heart"><a href="#" class="font-sans font-normal px-3 ">Favorite</a></i>
-        </div>
-        <div class="text-white pl-[30px]  hover:text-yellow-400">
-          <i class="fas fa-shopping-cart"><a href="#" class="font-sans font-normal px-3 ">Cart</a></i>
-        </div>
-        <div class="text-white pl-[30px]  hover:text-yellow-400">
-          <i class="fas fa-user"><a href="#" class="font-sans font-normal px-3  ">Account</a></i>
-        </div>
+      <div class="flex-none">
+        <ul class="menu menu-horizontal px-1 pr-10">
+          <li>
+            <a href="#" class="font-sans font-normal px-3 hover:text-yellow-400"><i class="fas fa-heart"></i>Favorite</a>
+          </li>
+          <li>
+            <a href="#" class="font-sans font-normal px-3 hover:text-yellow-400"><i class="fas fa-shopping-cart"></i>Cart</a>
+          </li>
+          <div class="dropdown flex ">
+            <label tabindex="0" class="btn btn-ghost btn-circle text-white hover:text-yellow-400">
+              <i class="fas fa-user"></i>
+              <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+              </svg>
+            </label>
+            <ul tabindex="0"
+              class="menu menu-compact font-medium text-black dropdown-content mt-14 p-2 shadow bg-white rounded-box w-28">
+              <li><a class="hover:text-blue-900">Account</a></li>
+              <hr class="text-blue-900">
+              <li><a class="hover:text-blue-900">Sign In</a></li>
+              <li><a class="hover:text-blue-900">Sign Up</a></li>
+            </ul>
+          </div>
+        </ul>
       </div>
-    </nav>
-          <!-- navbar ke-2 -->
-    <div class="flex bg-[#05035a] h-[90px]">
-        <div class="md:flex p-6 mx-8 mt-5 justify-left ">
-          <a href="#" class="py-5 px-3 text-white  hover:text-yellow-400">Home</a>
-          <a href="#" class="py-5 px-3 text-white hover:text-yellow-400">Catalogue </a>
-          <a href="#" class="py-5 px-3 text-white hover:text-yellow-400">Rachat</a>
-          <a href="#" class="py-5 px-3 text-white hover:text-yellow-400">News </a>
-          <a href="#" class="py-5 px-3 text-white hover:text-yellow-400">Events</a>
-        </div>
     </div>
+  </nav>
+
+  <!-- navbar ke-2 -->
+  <div class="flex bg-[#05035a] h-[90px]">
+    <div class="md:flex p-6 mx-8 mt-5 justify-left font-extralight ">
+      <a href="#" class="py-5 px-3 text-white  hover:text-yellow-400">Home</a>
+      <a href="#" class="py-5 px-3 text-white hover:text-yellow-400">Catalogue </a>
+      <a href="#" class="py-5 px-3 text-white hover:text-yellow-400">Rachat</a>
+      <a href="#" class="py-5 px-3 text-white hover:text-yellow-400">News </a>
+      <a href="#" class="py-5 px-3 text-white hover:text-yellow-400">Events</a>
+    </div>
+  </div>
   <!--End Content Navbar -->
 
-
   <!-- Content Page -->
-  <div class="bg-[#05035a] h-[66 0px]">
-      <div class="items-center grid  lg:grid-cols-2 ">
-        <div class=" ml-40 py-50">
-          <h1 class="text-6xl text-white font-bold ">Achetere, revendre & collectioner</h1>
-          <p class="text-slate-300 text-justify font-sans mt-12">
-            Lorean ipsun dolor sit aneat, conseacteatur adipisci ealit, sead eaiusnod teanpor incidunt ut laborea eat dolorea nagna aliqua.
-            Ut eanin ad ninin veanian, quis nostrun eaxearcitationean ullan corporis suscipit laboriosan, nisi ut aliquid eax eaa connodi conseaquatur.
-            Quis autea iurea reapreaheandearit in voluptatea vealit eassea cillun dolorea eau fugiat nulla pariatur.
-            eaxceapteaur sint obcaeacat cupiditat non proideant, sunt in culpa qui officia deasearunt nollit anin id east laborun.
-          </p>
-        </div>
+  <div class="bg-[#05035a]">
+    <div class="items-center grid grid-cols-1 lg:grid-cols-2 ">
+      <div class="lg:-mt-14 mx-10 lg:pl-20 my-10">
+        <h1 class="sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl text-2xl text-white font-bold ">Achetere, revendre & collectioner
+        </h1>
+        <p class="text-slate-300 text-justify font-xs font-sans md:pt-7 pt-5 pl-3">
+          Lorean ipsun dolor sit aneat, conseacteatur adipisci ealit, sead eaiusnod teanpor incidunt ut laborea eat
+          dolorea nagna aliqua.
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos fugit possimus cupiditate doloribus voluptas,
+          odio quo ab
+          repudiandae est mollitia provident iure esse hic, sapiente autem dignissimos accusantium rem nulla!
+          Ut eanin ad ninin veanian, quis nostrun eaxearcitationean ullan corporis suscipit laboriosan, nisi ut aliquid
+          eax eaa connodi conseaquatur.
+          Quis autea iurea reapreaheandearit in voluptatea vealit eassea cillun dolorea eau fugiat nulla pariatur.
+          eaxceapteaur sint obcaeacat cupiditat non proideant, sunt in culpa qui officia deasearunt nollit anin id east
+          laborun.
+        </p>
+      </div>
 
-        <div>
-          <div class="flex px-10 gap-5 ">
-            <div class="">
-              <div class="rounded-sm bg-gray-400/50 w-[300px] ">
-                <a href="#!">
-                  <img class="rounded-t-sm h-[300px]" src="img/game1.jpg" alt=""/>
+      <div>
+        <div class="flex flex-col md:flex-row md:justify-center lg:justify-start px-10 gap-8">
+          <div class="">
+            <div class="rounded-sm flex md:block bg-gray-400/50  md:w-[300px]">
+              <div class="w-full">
+                <a href="#">
+                  <img class="rounded-t-sm w-full md:w-auto" src="img/game1.jpg" alt="" />
                 </a>
-                <div class="p-5">
-                  <h5 class="text-slate-100 text-xl text-center font-bold mb-2">Pokemon Legends Arceus </h5>
-                  <p class="text-slate-200 font-thin ">
-                    Pokémon Legends: Arceus game, you'll join the Galaxy Team as a member of the Survey Corps.
-                  </p>
-                  <div class="flex mt-5 mb-2">
-                    <p class="text-slate-400">
-                      Price
-                    </p>
-                    <p class="text-slate-100 text-right font-bold ml-40">
-                      US $72,5
-                    </p>
-                  </div>
-                  <button type="button" class="ml-52 px-5 py-2.5 bg-blue-700 text-white font-medium text-xs uppercase rounded-sm  hover:bg-[#082173]">
-                    Buy
-                  </button>
-                </div>
               </div>
-            </div>
-
-            <div class="rounded-sm shadow-sm bg-white/20 w-[300px] ">
-              <a href="#!">
-                <img class="rounded-t-sm h-[300px]" src="img/game2.jpg" alt=""/>
-              </a>
               <div class="p-5">
-                <h5 class="text-slate-100 text-xl text-center font-bold mb-2">Pokemon Lets Go Pikachu</h5>
-                <p class="text-slate-200 font-thin ">
-                  Partner up with Pikachu to catch and collect Pokémon on a rich and vibrant adventure.
+                <h5 class="text-slate-100 text-lg md:text-xl text-center font-bold mb-2">Pokemon Legends Arceus </h5>
+                <p class="text-slate-200 text-sm md:text-base font-thin ">
+                  Pokémon Legends: Arceus game, you'll join the Galaxy Team as a member of the Survey Corps.
                 </p>
-                <div class="flex mt-5 mb-2">
+                <div class="flex text-sm md:text-base mt-5 mb-2">
                   <p class="text-slate-400">
                     Price
                   </p>
                   <p class="text-slate-100 text-right font-bold ml-40">
-                    US $59,9
+                    US $72,5
                   </p>
                 </div>
-                <button type="button" class="ml-52 px-5 py-2.5 bg-blue-700 text-white font-medium text-xs uppercase rounded-sm  hover:bg-[#082173]">
+                <button type="button"
+                  class="ml-52 px-5 py-2.5 bg-blue-700 text-white font-normal text-xs uppercase rounded-sm  hover:bg-[#082173]">
                   Buy
                 </button>
               </div>
             </div>
           </div>
 
-          <div class="py-10">
-            <div class="ml-80">
-              <div class="flex text-white font-thin">
-                <p class="pb-3">2/4 Product</p>
-                <div class="pl-36">
-                  <a href="#"><i class="px-7 py-1 fas fa-arrow-left  hover:text-yellow-400"></i></a>
-                  <a href="#"><i class="py-1 fas fa-arrow-right hover:text-yellow-400"></i></a>
-                </div>
+          <div class="">
+            <div class="rounded-sm flex md:block bg-gray-400/50 md:w-[300px]">
+              <div class="w-full">
+                <a href="#">
+                  <img class="rounded-t-sm w-full md:w-auto" src="img/game2.jpg" alt="" />
+                </a>
               </div>
-              <div class="border-2 border-yellow-500 w-32"></div>
+              <div class="p-5">
+                <h5 class="text-slate-100 text-lg md:text-xl text-center font-bold mb-2">Pokemon Lets Go Pikachu</h5>
+                <p class="text-slate-200 text-sm md:text-base font-thin ">
+                  Partner up with Pikachu to catch and collect Pokémon on a rich and vibrant adventure.
+                </p>
+                <div class="flex text-sm md:text-base mt-5 mb-2">
+                  <p class="text-slate-400">
+                    Price
+                  </p>
+                  <p class="text-slate-100 text-right font-bold ml-40">
+                    US $72,5
+                  </p>
+                </div>
+                <button type="button"
+                  class="ml-52 px-5 py-2.5 bg-blue-700 text-white font-normal text-xs uppercase rounded-sm  hover:bg-[#082173]">
+                  Buy
+                </button>
+              </div>
             </div>
           </div>
-
         </div>
+
+        <div class="py-10">
+          <div class="pl-40">
+            <div class="flex text-white font-thin">
+              <p class="pb-3"><span class="text-lg">2</span>/4 Product</p>
+              <div class="pl-20 lg:py-2">
+                <a href="#"><i class="px-7 py-1 fas fa-arrow-left  hover:text-yellow-400"></i></a>
+                <a href="#"><i class="py-1 fas fa-arrow-right hover:text-yellow-400"></i></a>
+              </div>
+            </div>
+            <div class="border-2 border-yellow-500 w-32"></div>
+          </div>
+        </div>
+
       </div>
     </div>
+  </div>
   <!--End Content Page -->
 
 
   <!-- Content Product -->
-  <div class="bg-[#082173] h-[570px]">
-    <div class="flex mx-40 py-10 font-sans">
-      <div>
-        <h1 class="text-5xl text-white font-bold ">Product Games</h1>
-        <p class="text-slate-300 mt-5">
+  <div class="bg-[#082173]">
+    <div class="flex xl:mx-28 lg:mx-20 lg:pt-10 font-sans">
+      <div class="px-10 pt-10 lg:pt-3">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl text-white font-bold ">Product Games</h1>
+        <p class="text-slate-300 mt-5 pl-5 text-sm text-justify lg:text-base">
           Lorean ipsun dolor sit aneat, conseacteatur adipisci ealit, sead eaiusnod teanpor incidunt ut laborea eat dolorea nagna aliqua.
           Ut eanin ad ninin veanian, quis nostrun eaxearcitationean ullan corporis suscipit laboriosan, nisi ut aliquid eax eaa connodi conseaquatur.
         </p>
       </div>
     </div>
 
-    <div class="flex mx-56 my-10 gap-14">
+    <div class="grid grid-cols-2 lg:grid-cols-4 p-10 lg:pb-20 gap-5 xl:px-56 lg:gap-14">
       <div class="bg-white/10 p-5 rounded-2xl">
         <img src="img/p1.png" alt="" class="h-20 mx-auto"/>
         <h4 class="pt-4 text-center text-slate-200  font-bold"> Product Pokemon</h4>
@@ -215,9 +249,8 @@
   <!--End Content Product -->
 
   <!-- Content New Collection -->
-  <div class="bg-[#05035a] h-[700px]">
-   <div class="font-sans">
-        <!-- title -->
+  <!-- <div class="bg-[#05035a] h-[700px]">
+   <div class=" container relative mx-auto font-sans">
       <div class="flex pt-24">
         <div class="mx-40">
           <h1 class="text-5xl text-white font-bold ">New Collections</h1>
@@ -229,14 +262,13 @@
           </p>
         </div>
         <div class="mt-24 mx-auto">
-          <div class="text-yellow-500 ">
+          <div class="text-yellow-500">
             <a href="#" class="font-semibold pl-64">More </a>
             <i class="px-3 fas fa-arrow-right"></i>
           </div>
         </div>
       </div>
 
-      <!-- image product -->
       <div class="flex mx-44 gap-5 pt-10 h-[450px]">
         <div class="border border-blue-900 bg-white/10 w-[350px]">
           <div class="text-right p-2">
@@ -280,46 +312,55 @@
 
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- End Content Favorite -->
 
 
   <!-- Content Events -->
-  <div class="flex bg-[#05035a] h-[700px]">
-    <div class="flex mx-auto my-20 p h-[550px]">
-      <div class="flex bg-[#082173] w-[1200px]">
-        <div class="px-5 py-7 w-[650px]">
-          <img src="img/e1.png" alt="" class="h-[500px] w-full rounded-lg">
-        </div>
-        <div class="w-[500px]">
-            <div class="pl-9 pt-28">
-              <h1 class="text-5xl text-white font-bold">Ours Events</h1>
-              <p class="text-slate-300 text-justify font-light pt-10">
-                Pokémon favorit Anda dari daerah Hoenn Pokémon Ruby dan Pokémon Sapphire hadir di Sunset Park!
-                Tur Pokémon GO: Hoenn - Las Vegas hadir di Nevada pada bulan Februari 2023.
-              </p>
-            </div>
-            <div class="pt-14 pl-72">
-              <div class="border border-yellow-500 w-[230px] h-9 rounded-sm">
-                <p class="text-white text-left px-4 py-1 font-thin">
-                  <a href="#" class="hover:text-yellow-500 ">
-                    See the next event
-                    <i class="pl-14 fas fa-arrow-right"></i>
-                  </a>
-                </p>
-
+  <div class="bg-[#05035a]">
+    <div class="py-16">
+      <div
+        class="container bg-[#082173] p-6 rounded-xl font-sans max-w-md mx-auto sm:max-w-xl md:max-w-xl lg:flex lg:max-w-5xl xl:max-w-[1300px]">
+        <div class="hidden lg:block">
+          <img src="img/e1.png" alt="event" class="object-cover pt-5">
+          <div class="pt-3 pl-5">
+            <div class="flex text-white font-thin">
+              <p class="text-sm"><span class="text-base">1/</span>8 Photo</p>
+              <div class="pt-1">
+                <a href="#"><i class="px-5 fas fa-arrow-left text-yellow-500"></i></a>
+                <a href="#"><i class="fas fa-arrow-right text-yellow-500"></i></a>
               </div>
             </div>
-            <div class="pt-40">
-                <div class="flex text-white font-thin">
-                  <p class="pb-3">1/8 Photo</p>
-                  <div class="">
-                    <a href="#"><i class="px-7 py-1 fas fa-arrow-left text-yellow-500"></i></a>
-                    <a href="#"><i class="py-1 fas fa-arrow-right text-yellow-500"></i></a>
-                  </div>
-                </div>
-                <div class="border-2 border-yellow-500 w-12"></div>
+            <div class="border-2 border-yellow-500 w-12"></div>
+          </div>
+        </div>
+        <div class="lg:p-12">
+          <h2 class="text-4xl font-bold text-slate-200 sm:text-4xl md:text-5xl">Ours Events</h2>
+          <img src="img/e1.png" alt="event"
+            class="mt-4 rounded-xl shadow-xl sm:mt-6 sm:h-full sm:w-full sm:object-cover sm:object-center lg:hidden">
+          <!-- lg : hidden -->
+          <div class="pb-5 pt-2 lg:hidden">
+            <div class="flex text-white font-thin lg:hidden">
+              <p class="pb-3 text-sm"><span class="text-lg">1/</span>8 Photo</p>
+              <div class="pt-2">
+                <a href="#"><i class="px-5 fas fa-arrow-left text-yellow-500"></i></a>
+                <a href="#"><i class="fas fa-arrow-right text-yellow-500"></i></a>
+              </div>
             </div>
+            <div class="border-2 border-yellow-500 w-7 lg:w-12"></div>
+          </div>
+          <!-- when lg : hidden -->
+          <p class="mt-2 text-slate-200 text-justify sm:pt-4 lg:pt-7 text-sm sm:text-base md:text-base">
+            Pokémon GO Tour: Hoenn - Las Vegas arrives in Nevada in February 2023. Your favorite Pokémon from the Hoenn
+            area Pokémon Ruby and Pokémon Sapphire make their way to Sunset Park! Pokémon GO Tour returns in 2023 for
+            Pokémon GO Tour: Hoenn - Las Vegas and Pokémon GO Tour: Hoenn - Global!
+          </p>
+          <div class="mt-5 sm:mt-6 md:pl-72">
+            <a href="#" class="inline-block px-5 py-2 sm:py-1 h-9 border border-yellow-500 hover:text-yellow-500 text-white rounded-sm font-sans font-thin tracking-wider
+             sm:text-sm text-xs">
+              See the next event <i class="pl-10 fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -328,7 +369,7 @@
 
 
   <!-- Content About Us -->
-  <div class="flex bg-[#05035a] h-[700px]">
+  <!-- <div class="flex bg-[#05035a] h-[700px]">
     <div class="flex mx-auto">
         <div class="w-[700px] my-16">
             <div class="pl-20 pr-12 pt-28">
@@ -345,7 +386,7 @@
               </p>
             </div>
             <div class="pt-14 pl-96">
-              <div class="border border-yellow-500 w-[230px] h-9 rounded-sm">
+              <div class="border border-yellow-500 w-[230px] h-9 rounded-r-full">
                 <p class="text-white text-left px-4 py-1 font-thin">
                   <a href="#" class="hover:text-yellow-500 ">
                     Find out more
@@ -362,74 +403,82 @@
           </div>
         </div>
     </div>
-  </div>
+  </div> -->
   <!-- End Content About Us -->
 
 
   <!-- Content Costumers -->
-  <div class="flex bg-[#05035a] h-[600px]">
-    <div class="flex m-auto gap-24  h-[350px] font-sans">
-        <div class="bg-white/10 rounded-3xl w-[250px]">
-          <div class="pt-10">
-            <img src="img/cs1.png" alt="" class="h-[200px] mx-auto"/>
+  <div class="flex bg-[#05035a] lg:h-[500px]  ">
+    <div class="items-center grid grid-cols-2 lg:grid-cols-4 mx-auto py-10 xl:mx-auto md:gap-24 xl:gap-32 gap-8 font-sans">
+        <div class="w-[200px] ">
+          <div class="bg-white/10 rounded-3xl md:w-[250px]">
+            <div class="pt-5 lg:pt-7">
+              <img src="img/cs1.png" alt="" class="h-[150px] lg:h-[200px] mx-auto"/>
+            </div>
+            <h4 class="text-center text-sm md:text-lg text-slate-100 pt-5 font-semibold">Services Client</h4>
+            <p class="text-xs sm:text-sm md:text-base font-thin text-center text-white p-2"> Lorean ipsun dolor sit aneat consseacteatur</p>
           </div>
-          <h4 class="text-center text-slate-100 pt-5 font-semibold">Services Client</h4>
-          <p class="font-thin text-center text-white p-2"> Lorean ipsun dolor sit aneat consseacteatur</p>
         </div>
 
-        <div class="bg-white/10 rounded-3xl w-[250px]">
-          <div class="pt-10">
-            <img src="img/cs2.png" alt="" class="h-[200px] mx-auto"/>
+        <div class="w-[200px] ">
+          <div class="bg-white/10 rounded-3xl md:w-[250px]">
+            <div class="pt-5 lg:pt-7">
+              <img src="img/cs2.png" alt="" class="h-[150px] lg:h-[200px] mx-auto"/>
+            </div>
+            <h4 class="text-center text-sm md:text-lg text-slate-100 pt-5 font-semibold">Secure Payment</h4>
+            <p class="text-xs sm:text-sm md:text-base font-thin text-center text-white p-2"> Lorean ipsun dolor sit aneat consseacteatur</p>
           </div>
-          <h4 class="text-center text-slate-100 pt-5 font-semibold">Secure Payment</h4>
-          <p class="font-thin text-center text-white p-2"> Lorean ipsun dolor sit aneat consseacteatur</p>
         </div>
 
-        <div class="bg-white/10 rounded-3xl w-[250px]">
-          <div class="pt-10">
-            <img src="img/cs3.png" alt="" class="h-[200px] mx-auto"/>
+        <div class="w-[200px] ">
+          <div class="bg-white/10 rounded-3xl md:w-[250px]">
+            <div class="pt-5 lg:pt-7">
+              <img src="img/cs3.png" alt="" class="h-[150px] lg:h-[200px] mx-auto"/>
+            </div>
+            <h4 class="text-center text-sm md:text-lg text-slate-100 pt-5 font-semibold">Express Delivery</h4>
+            <p class="text-xs sm:text-sm md:text-base font-thin text-center text-white p-2"> Lorean ipsun dolor sit aneat consseacteatur</p>
           </div>
-          <h4 class="text-center text-slate-100 pt-5 font-semibold">Express Delivery</h4>
-          <p class="font-thin text-center text-white p-2"> Lorean ipsun dolor sit aneat consseacteatur</p>
         </div>
 
-        <div class="bg-white/10 rounded-3xl w-[250px]">
-          <div class="pt-10">
-            <img src="img/cs4.png" alt="" class="h-[200px] mx-auto"/>
+        <div class="w-[200px] ">
+          <div class="bg-white/10 rounded-3xl md:w-[250px]">
+            <div class="pt-5 lg:pt-7">
+              <img src="img/cs4.png" alt="" class="h-[150px] lg:h-[200px] mx-auto"/>
+            </div>
+            <h4 class="text-center text-sm md:text-lg text-slate-100 pt-5 font-semibold">Click & Collect</h4>
+            <p class="text-xs sm:text-sm md:text-base font-thin text-center text-white p-2"> Lorean ipsun dolor sit aneat consseacteatur</p>
           </div>
-          <h4 class="text-center text-slate-100 pt-5 font-semibold">Click & Collect</h4>
-          <p class="font-thin text-center text-white p-2"> Lorean ipsun dolor sit aneat consseacteatur</p>
         </div>
-
       </div>
   </div>
   <!-- End Content Costumers -->
 
 
   <!-- Content News Letter -->
-  <div class="flex bg-[#082173] h-[300px]">
-    <div class="mx-52 items-center grid  grid-cols-1 lg:grid-cols-2 gap-12">
-      <div class="pr-16 font-sans">
-        <h1 class="text-6xl text-white font-medium ">Newsletter</h1>
-        <p class="text-white text-justify pt-8">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque doloribus odit alias voluptate, amet iusto consectetur nisi autem
-        </p>
-      </div>
-      <div class="mx-20 pt-24">
-        <div class="alert text-slate-300 rounded-sm bg-slate-900">
-          <i class="px-5 fa-solid fa-envelope">
-            <span class="font-sans px-3 font-normal">Your Email Address</span>
-          </i>
-          <button class="text-yellow-500 hover:text-white font-semibold ">Subscribe</button>
+  <!-- <div class="flex bg-[#082173] h-[300px]">
+      <div class="mx-52 items-center grid  grid-cols-1 lg:grid-cols-2 gap-12">
+        <div class="pr-16 font-sans">
+          <h1 class="text-6xl text-white font-medium ">Newsletter</h1>
+          <p class="text-white text-justify pt-8">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque doloribus odit alias voluptate, amet iusto consectetur nisi autem
+          </p>
+        </div>
+        <div class="mx-20 pt-24">
+          <div class="alert text-slate-300 rounded-sm bg-slate-900">
+            <i class="px-5 fa-solid fa-envelope">
+              <span class="font-sans px-3 font-normal">Your Email Address</span>
+            </i>
+            <button class="text-yellow-500 hover:text-white font-semibold ">Subscribe</button>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
+    </div> -->
   <!-- End News Letter -->
 
-  <div class="bg-yellow-500 h-[50px]">
+  <div class="bg-yellow-500 h-[40px] md:h-[50px]">
     <div class="text-center font-sans py-3">
-      <a href="#" class="text-xl text-white font-bold">Back To The Top
+      <a href="#" class="text-base sm:text-lg lg:text-xl text-white font-bold">
+        Back To The Top
         <i class="px-5 far fa-hand-point-up"></i>
       </a>
     </div>
@@ -440,7 +489,7 @@
     <div>
       <span class="footer-title">Services</span>
       <a href="#" class="hover:text-yellow-500">Branding</a>
-      <a href="#" class="hover:text-yellow-500"">Design</a>
+      <a href="#" class="hover:text-yellow-500">Design</a>
       <a href="#" class="hover:text-yellow-500">Marketing</a>
       <a href="#" class="hover:text-yellow-500">Advertisement</a>
     </div>
@@ -460,28 +509,42 @@
   </footer>
   <footer class="bg-[#05035a] text-white footer px-10 py-4">
     <div class="items-center grid-flow-col">
-     <img src="img/icon.png" class="w-28" alt="">
-     <h1 class="font-sans text-base font-bold pl-6">The Pokemon Company</h1>
-        </br>
+      <img src="img/icon.png" class="w-28" alt="">
+      <h1 class="font-sans text-base font-bold pl-6">The Pokemon Company</h1>
+      </br>
       <p class="font-thin pl-4">
         ©2023 Niantic, Inc. ©2023 Pokémon. ©1995–2023 Nintendo / Creatures Inc. / GAME FREAK inc.
       </p>
     </div>
     <div class="md:place-self-center">
       <div class="grid grid-flow-col gap-5">
-        <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>
-        <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>
-        <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+            <path
+              d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+            </path>
+          </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+            <path
+              d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z">
+            </path>
+          </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+            <path
+              d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
+            </path>
+          </svg></a>
       </div>
     </div>
   </footer>
   <!-- end footer-->
 
 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
-
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
